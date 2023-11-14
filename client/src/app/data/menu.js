@@ -34,18 +34,11 @@ export const menuBar = [
     submenu: true,
     submenuItems: [
       {
-        title: "Administrar Licitaciones",
-        url: "/dashboard/licitaciones/admin",
+        title: "Mis Licitaciones",
+        url: "/dashboard/tenders",
+        //auth: ['admin', 'superAdmin'],
       },
-      { title: "Liciataiones en curso", url: "/dashboard/licitaciones/active" },
-      {
-        title: "Liciataiones Completas",
-        url: "/dashboard/licitaciones/complete",
-      },
-      {
-        title: "Liciataiones Canceladas",
-        url: "/dashboard/licitaciones/cancel",
-      },
+      { title: "Mis Propuestas", url: "/dashboard/proposals" },
     ],
   },
   {
@@ -55,8 +48,32 @@ export const menuBar = [
     submenu: true,
     submenuItems: [
       {
-        title: "Mis Facturas",
-        url: "/dashboard/finanzas/facturas",
+        title: "Mis Solicitudes",
+        url: "/dashboard/finanzas/solicitudes",
+      },
+      {
+        title: "Apertura de cuenta",
+        url: "/dashboard/finanzas/aperturaCuenta",
+      },
+      {
+        title: "Solicitar producto",
+        url: "/dashboard/finanzas/solicitarProducto",
+      },
+    ],
+  },
+  {
+    title: "Banco",
+    //url: "/dashboard/bank",
+    icon: <BiSolidBank />,
+    submenu: true,
+    submenuItems: [
+      {
+        title: "Cuentas Bancarias",
+        url: "/dashboard/bank/accounts",
+      },
+      {
+        title: "Productos Financieros",
+        url: "/dashboard/bank/financialProducts",
       },
     ],
   },

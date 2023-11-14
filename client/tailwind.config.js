@@ -4,6 +4,7 @@ module.exports = {
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./node_modules/tw-elements/dist/js/**/*.js",
   ],
   theme: {
     extend: {
@@ -37,7 +38,33 @@ module.exports = {
         },
       },
     },
-
-    plugins: [],
+    dialogBody: {
+      defaultProps: {
+        className: "",
+        divider: false,
+      },
+      styles: {
+        base: {
+          initial: {
+            position: "relative",
+            p: "p-4",
+            color: "text-blue-gray-500",
+            fontSmoothing: "antialiased",
+            fontFamily: "font-sans",
+            fontSize: "text-base",
+            fontWeight: "font-light",
+            lineHeight: "leading-relaxed",
+          },
+          divider: {
+            borderTop: "border-t",
+            borderTopColor: "border-t-blue-gray-100",
+            borderBottom: "border-b",
+            borderBottomColor: "border-b-blue-gray-100",
+          },
+        },
+      },
+    },
   },
+  plugins: [require("tw-elements/dist/plugin.cjs")],
+  darkMode: "class",
 };
